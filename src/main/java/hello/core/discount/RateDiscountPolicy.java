@@ -6,14 +6,14 @@ import hello.core.member.Member;
 /**
  * 구체(구현) 클래스
  */
-public class FixDiscountPolicy implements DiscountPolicy {
+public class RateDiscountPolicy implements DiscountPolicy {
 
-    private int discountFixAmount = 1000; // 1000원 할인
+    private int discountPercent = 10;
 
     @Override
     public int discount(Member member, int price) {
-        if(member.getGrade() == Grade.VIP) { // enum : == (비교)
-            return discountFixAmount;
+        if (member.getGrade() == Grade.VIP) {
+            return price * discountPercent / 100;
         } else {
             return 0;
         }

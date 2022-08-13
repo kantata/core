@@ -2,6 +2,9 @@ package hello.core.discount;
 
 import hello.core.member.Member;
 
+/**
+ * 추상(인터페이스) 의존
+ */
 public interface DiscountPolicy {
 
     /**
