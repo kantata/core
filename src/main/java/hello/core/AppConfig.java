@@ -9,6 +9,10 @@ import hello.core.member.MemoryMemberRepository;
 import hello.core.order.OrcerService;
 import hello.core.order.OrderServiceImpl;
 
+/**
+ * 의존관계 주입
+ * Ioc 컨테이너 or DI 컨테이너
+ */
 public class AppConfig {
 
     public MemberService memberService() {
