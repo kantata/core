@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration // 구성정보(설정정보)
 public class AppConfig {
 
-    @Bean // 스프링컨테이너에 등록
+    @Bean(name="memberService") // 스프링컨테이너에 등록
     public MemberService memberService() {
         return new MemberServiceImpl(memberRepository()); // 생성자 주입
     }
